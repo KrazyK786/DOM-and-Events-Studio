@@ -8,6 +8,7 @@ function init(){
     let spaceShuttleHeight = document.getElementById("spaceShuttleHeight");
     let height = 0;
     let landButton = document.getElementById("landing");
+    let abortButton = document.getElementById("missionAbort");
 
     // When the "Take off" button is clicked, the following should happen:
     takeOffButton.addEventListener("click",function(){
@@ -37,7 +38,20 @@ function init(){
         spaceShuttleHeight.innerHTML = 0;
     });
 
-    
+    // When the "Abort Mission" button is clicked, the following should happen:
+    abortButton.addEventListener("click",function(){
+        // A window confirm should let the user know "Confirm that you want to abort the mission." If the user wants to abort the mission, then add steps 2-4.
+        let abortStatus = window.confirm("Confirm that you want to abort the mission");
+
+        if (abortStatus){
+            // The flight status should change to "Mission aborted."
+            flightStatus.innerHTML = "Mission aborted";
+            // The background color of the shuttle flight screen should change from blue to green.
+            shuttleFlightScreen.style.background = "green";
+            // The shuttle height should go do to 0.
+            spaceShuttleHeight.innerHTML = 0;
+        }
+    });
     
 
 
