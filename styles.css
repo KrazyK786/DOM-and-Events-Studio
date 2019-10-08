@@ -4,3 +4,9 @@
     height: 80%;
     width: 40%;
 }
+
+#rocket {
+    position: relative;
+    right: 0px;
+    bottom: -250px;
+}
