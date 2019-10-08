@@ -77,7 +77,7 @@ function init(){
     // When the "Up", "Down", "Right", and "Left" buttons are clicked, the following should happen:
     // The rocket image should move 10 px in the direction of the button that was clicked.
     left.addEventListener("click",function(){
-        if (xPos < 180){
+        if (xPos < 250){
             xPos += 10;
             // rocket.style.position = "relative";
             // rocket.style.transform = "translateX(" + xPos + "px)";
@@ -85,7 +85,7 @@ function init(){
         }
     });
     right.addEventListener("click",function(){
-        if (xPos > -180){
+        if (xPos > -250){
             xPos -= 10;
             // rocket.style.position = "relative";
             // rocket.style.transform = "translateX(" + xPos + "px)";
